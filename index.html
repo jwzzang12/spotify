@@ -16,10 +16,8 @@
         <h2 class="sr-only">gnb</h2>
         <i class="fa-solid fa-house"><span class="sr-only">홈</span></i>
         <div>
-          <label for="search">
-            <i class="fa-solid fa-magnifying-glass"><span class="sr-only">검색</span></i>
-            <input id="search" type="text" placeholder="어떤 콘텐츠를 감상하고 싶으세요?" />
-          </label>
+          <i class="fa-solid fa-magnifying-glass"><span class="sr-only">검색</span></i>
+          <input id="search" type="text" placeholder="어떤 콘텐츠를 감상하고 싶으세요?" aria-label="검색" />
           <i class="fa-regular fa-square-plus"><span class="sr-only">둘러보기</span></i>
         </div>
         <div>
@@ -75,6 +73,175 @@
           <button><span class="material-symbols-outlined"> language </span> 한국어</button>
         </div>
       </aside>
+      <section id="content">
+        <section id="popular-artists">
+          <div class="section-title">
+            <h2>인기 아티스트</h2>
+            <a href="#">모두 표시</a>
+          </div>
+          <ul>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="NewJeans" /></div>
+              <div class="card-title">NewJeans</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="G-DRAGON" /></div>
+              <div class="card-title">G-DRAGON</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="BIGBANG" /></div>
+              <div class="card-title">BIGBANG</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="aespa" /></div>
+              <div class="card-title">aespa</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="DAY6" /></div>
+              <div class="card-title">DAY6</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+            <li class="card">
+              <div class="card-image circle"><img src="" alt="ROSÉ" /></div>
+              <div class="card-title">ROSÉ</div>
+              <span class="card-desc">아티스트</span>
+            </li>
+          </ul>
+        </section>
+        <!-- popular artists end -->
+
+        <section id="popular-albums">
+          <div class="section-title">
+            <h2>인기 앨범 및 싱글</h2>
+            <a href="#">모두 표시</a>
+          </div>
+          <ul>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="IM HERO 앨범커버" /></div>
+              <div class="card-title">IM HERO</div>
+              <span class="card-desc">임영웅</span>
+            </li>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="GOLDEN 앨범커버" /></div>
+              <div class="card-title">GOLDEN</div>
+              <span class="card-desc">정국</span>
+            </li>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="MUSE 앨범커버" /></div>
+              <div class="card-title">MUSE</div>
+              <span class="card-desc">지민</span>
+            </li>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="MADE 앨범커버" /></div>
+              <div class="card-title">MADE</div>
+              <span class="card-desc">BIGBANG</span>
+            </li>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="rosie 앨범커버" /></div>
+              <div class="card-title">rosie</div>
+              <span class="card-desc">ROSÉ</span>
+            </li>
+            <li class="card">
+              <div class="card-image square"><img src="" alt="Caligo Pt.1 앨범커버" /></div>
+              <div class="card-title">Caligo Pt.1</div>
+              <span class="card-desc">PLAVE</span>
+            </li>
+          </ul>
+        </section>
+        <!-- popular albums end -->
+
+        <section id="popular-radios">
+          <div class="section-title">
+            <h2>인기 라디오</h2>
+            <a href="#">모두 표시</a>
+          </div>
+          <ul>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="잔나비 라디오" />
+              </div>
+              <span class="card-desc">허회경, 너드커넥션, 혁오 외 다양한 아티스트와 함께</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="aespa 라디오" />
+              </div>
+              <span class="card-desc">LE SSERAFIM, KISS OF LIFE, NewJeans 외 다양한 아티스트와 함께</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="이문세 라디오" />
+              </div>
+              <span class="card-desc">김광석, 이승환, 김현식 외 다양한 아티스트와 함께</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="G-Dragon 라디오" />
+              </div>
+              <span class="card-desc">GD&Top, BIGBANG, 태양 외 다양한 아티스트와 함께</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="QWER 라디오" />
+              </div>
+              <span class="card-desc">YENA, 경서, 투어스 외 다양한 아티스트와 함께</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="AKMU 라디오" />
+              </div>
+              <span class="card-desc">폴킴, DAY6, 도경수 외 다양한 아티스트와 함께</span>
+            </li>
+          </ul>
+        </section>
+        <!-- popular radios end -->
+
+        <section id="recommendations">
+          <div class="section-title"><h2>추천 차트</h2></div>
+          <ul>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="주간 인기곡 글로벌" />
+              </div>
+              <span class="card-desc">현재 가장 많이 재생된 트랙의 주간 업데이트입니다 - 글로벌.</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="주간 인기곡 대한민국" />
+              </div>
+              <span class="card-desc">현재 가장 많이 재생된 트랙의 주간 업데이트입니다 - 대한민국.</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="일일 기곡 글로벌" />
+              </div>
+              <span class="card-desc">현재 가장 많이 재생된 트랙의 일일 업데이트입니다 - 글로벌.</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="일일 인기곡 대한민국" />
+              </div>
+              <span class="card-desc">현재 가장 많이 재생된 트랙의 일일 업데이트입니다 - 대한민국.</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="일일 유명곡 글로벌" />
+              </div>
+              <span class="card-desc">현재 가장 유명한 트랙의 일일 업데이트입니다 - 글로벌.</span>
+            </li>
+            <li class="card">
+              <div class="card-image square">
+                <img src="" alt="일일 유명곡 대한민국" />
+              </div>
+              <span class="card-desc">현재 가장 유명한 트랙의 일일 업데이트입니다 - 대한민국.</span>
+            </li>
+          </ul>
+        </section>
+      </section>
     </main>
 
     <footer>
