@@ -1,0 +1,12 @@
+:root {
+  --spotify-green: #1ed760;
+  --text-white: #ffffff;
+  --background-black: #121212;
+}
+
+body {
+  background-color: var(--background-black);
+  color: var(--text-white);
+  margin: 0;
+  padding: 0;
+}
