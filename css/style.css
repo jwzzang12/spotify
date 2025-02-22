@@ -13,12 +13,14 @@ html {
 }
 
 body {
-  min-width: 100vw;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   color: var(--text-white);
   background-color: var(--background-black);
+  overflow: hidden;
 }
 
 .sr-only {
@@ -48,6 +50,8 @@ header,
 
 header {
   padding: 1rem 2rem;
+  flex: 0 0 auto;
+  /* header will not grow / shrink / size is determine by its content */
 }
 
 #logo {
@@ -186,12 +190,53 @@ nav .gnb-actions .fa-arrow-down-long {
 
 nav .gnb-actions .login {
   padding: 1.5rem;
+  border-radius: 100px;
   font-weight: 700;
   color: var(--background-black);
   background-color: var(--text-white);
-  border-radius: 100px;
 }
 
 nav .gnb-actions .login:hover {
   transform: scale(1.05);
+}
+
+main {
+  display: flex;
+  overflow: hidden;
+  flex: 1 1 auto;
+  /* can grow to fill available space / can also shrink if needed / inital size is based on its content */
+  margin-bottom: 1rem;
+}
+
+aside {
+  margin: 0 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--black-07);
+  flex: 1;
+}
+
+#content {
+  margin-right: 1rem;
+  padding: 3rem;
+  border-radius: 10px;
+  background: linear-gradient(var(--black-10) 0%, var(--black-10) 10%, var(--black-07) 10%, var(--black-07) 100%);
+  flex: 3;
+  overflow-y: auto;
+  scrollbar-color: var(--text-weak-white);
+}
+
+#content ul {
+  display: flex;
+}
+
+#content .card {
+}
+
+#content .card-image {
+  width: 15rem;
+}
+
+#content img {
+  width: 100%;
 }
