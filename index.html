@@ -11,36 +11,72 @@
   </head>
   <body>
     <header>
-      <img id="logo" src="./assets/2024-spotify-logo-icon/Primary_Logo_White_RGB.svg" alt="spotify" />
+      <a href="#"><img id="logo" src="./assets/2024-spotify-logo-icon/Primary_Logo_White_RGB.svg" alt="spotify" /></a>
+      <nav id="gnb">
+        <h2 class="sr-only">gnb</h2>
+        <i class="fa-solid fa-house"><span class="sr-only">홈</span></i>
+        <div>
+          <label for="search">
+            <i class="fa-solid fa-magnifying-glass"><span class="sr-only">검색</span></i>
+            <input id="search" type="text" placeholder="어떤 콘텐츠를 감상하고 싶으세요?" />
+          </label>
+          <i class="fa-regular fa-square-plus"><span class="sr-only">둘러보기</span></i>
+        </div>
+        <div>
+          <a href="#">Premium</a>
+          <a href="#">지원</a>
+          <a href="#">다운로드하기</a>
+        </div>
+        <div>
+          <a href="#">
+            <i class="fa-solid fa-arrow-down-long"></i>
+            앱 설치하기
+          </a>
+          <a href="#">가입하기</a>
+          <a href="#">로그인하기</a>
+        </div>
+      </nav>
     </header>
-    <nav id="gnb">
-      <h2 class="sr-only">gnb</h2>
-      <i class="fa-solid fa-house"><span class="sr-only">홈</span></i>
-      <div>
-        <label for="search">
-          <i class="fa-solid fa-magnifying-glass"><span class="sr-only">검색</span></i>
-          <input id="search" type="text" placeholder="어떤 콘텐츠를 감상하고 싶으세요?" />
-        </label>
-        <i class="fa-regular fa-square-plus"><span class="sr-only">둘러보기</span></i>
-      </div>
-      <div>
-        <a href="#">Premium</a>
-        <a href="#">지원</a>
-        <a href="#">다운로드하기</a>
-      </div>
-      <div>
-        <a href="#">
-          <i class="fa-solid fa-arrow-down-long"></i>
-          앱 설치하기
-        </a>
-        <a href="#">가입하기</a>
-        <a href="#">로그인하기</a>
-      </div>
-    </nav>
-    <aside>
-      <span class="material-symbols-outlined"> library_music </span>
-      <span class="material-symbols-outlined"> language </span>
-    </aside>
+    <!-- header end -->
+    <main>
+      <aside>
+        <div>
+          <h3><span class="material-symbols-outlined"> library_music </span> 내 라이브러리</h3>
+          <span class="material-symbols-outlined"> add </span>
+        </div>
+
+        <section id="library">
+          <div>
+            <h4>첫 번째 플레이리스트를 만드세요.</h4>
+            <p>어렵지 않아요. 저희가 도와드릴게요.</p>
+            <button>플레이리스트 만들기</button>
+          </div>
+          <div>
+            <h4>팔로우할 팟캐스트를 찾아보세요</h4>
+            <p>새로운 에피소드에 대한 소식을 알려드릴게요.</p>
+            <button>팟캐스트 둘러보기</button>
+          </div>
+        </section>
+        <!-- libaray end -->
+
+        <section id="legal-links">
+          <ul>
+            <li><a href="#">법률 정보</a></li>
+            <li><a href="#">안전 및 개인정보 보호 센터</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">광고 상세정보</a></li>
+            <li><a href="#">접근성</a></li>
+          </ul>
+          <div><a href="#">쿠키</a></div>
+        </section>
+        <!-- legal links end -->
+
+        <div id="language">
+          <button><span class="material-symbols-outlined"> language </span> 한국어</button>
+        </div>
+      </aside>
+    </main>
+
     <footer>
       <i class="fa-brands fa-instagram"><span class="sr-only">인스타그램</span></i>
       <i class="fa-brands fa-twitter"><span class="sr-only">트위터</span> </i>
