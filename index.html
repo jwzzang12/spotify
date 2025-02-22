@@ -4,11 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/e46a16ab6a.js" crossorigin="anonymous"></script>
     <title>Spotify - Web Player: Music for everyone</title>
   </head>
   <body>
     <header>
       <img id="logo" src="./assets/2024-spotify-logo-icon/Primary_Logo_White_RGB.svg" alt="spotify" />
     </header>
+    <nav id="gnb">
+      <h2 class="sr-only">gnb</h2>
+      <i class="fa-solid fa-house"><span class="sr-only">홈</span></i>
+      <div>
+        <label for="search">
+          <i class="fa-solid fa-magnifying-glass"><span class="sr-only">검색</span></i>
+          <input id="search" type="text" placeholder="어떤 콘텐츠를 감상하고 싶으세요?" />
+        </label>
+        <i class="fa-regular fa-square-plus"><span class="sr-only">둘러보기</span></i>
+      </div>
+      <div>
+        <a href="#">Premium</a>
+        <a href="#">지원</a>
+        <a href="#">다운로드하기</a>
+      </div>
+      <div>
+        <a href="#">
+          <i class="fa-solid fa-arrow-down-long"></i>
+          앱 설치하기
+        </a>
+        <a href="#">가입하기</a>
+        <a href="#">로그인하기</a>
+      </div>
+    </nav>
+    <aside>
+      <span class="material-symbols-outlined"> library_music </span>
+      <span class="material-symbols-outlined"> language </span>
+    </aside>
+    <footer>
+      <i class="fa-brands fa-instagram"><span class="sr-only">인스타그램</span></i>
+      <i class="fa-brands fa-twitter"><span class="sr-only">트위터</span> </i>
+      <i class="fa-brands fa-facebook"><span class="sr-only">페이스북</span></i>
+    </footer>
   </body>
 </html>
