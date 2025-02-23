@@ -1,8 +1,10 @@
 :root {
   --spotify-green: #1ed760;
   --text-white: #ffffff;
+  --text-hover-white: rgba(255, 255, 255, 0.9);
   --text-weak-white: rgba(255, 255, 255, 0.6);
   --background-black: #121212;
+  --black-03: rgba(255, 255, 255, 0.03);
   --black-07: rgba(255, 255, 255, 0.07);
   --black-10: rgba(255, 255, 255, 0.1);
 }
@@ -33,6 +35,23 @@ body {
   white-space: nowrap;
 }
 
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--background-black);
+  background-color: var(--text-white);
+}
+
+.btn:hover {
+  background-color: var(--text-hover-white);
+  transform: scale(1.05);
+}
+
 header,
 .gnb-left,
 .gnb-right,
@@ -42,7 +61,9 @@ header,
 .fa-arrow-down-long,
 .gnb-links,
 .gnb-actions,
-.gnb-right a {
+.gnb-right a,
+#library-title h3,
+aside #library-title a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +165,6 @@ input:focus {
 
 nav .gnb-right a {
   color: var(--text-weak-white);
-  text-decoration: none;
 }
 
 nav .gnb-links {
@@ -184,44 +204,140 @@ nav .gnb-actions .fa-arrow-down-long {
   margin-right: 0.5rem;
   padding: 0.2rem;
   border: 1px solid var(--text-weak-white);
-  border-radius: 100%;
+  border-radius: 50%;
   font-size: 1rem;
 }
 
 nav .gnb-actions .login {
   padding: 1.5rem;
-  border-radius: 100px;
-  font-weight: 700;
   color: var(--background-black);
-  background-color: var(--text-white);
-}
-
-nav .gnb-actions .login:hover {
-  transform: scale(1.05);
 }
 
 main {
   display: flex;
+  margin-bottom: 1rem;
   overflow: hidden;
   flex: 1 1 auto;
   /* can grow to fill available space / can also shrink if needed / inital size is based on its content */
-  margin-bottom: 1rem;
 }
 
 aside {
   margin: 0 1rem;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  background-color: var(--black-03);
+  flex: 1;
+}
+
+aside #library-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  color: var(--text-weak-white);
+}
+
+aside #library-title h3 {
+  font-size: 1.6rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+aside #library-title h3:hover {
+  color: var(--text-white);
+}
+
+aside #library-title h3 .material-symbols-outlined {
+  margin-right: 1rem;
+}
+
+aside #library-title a {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: var(--text-weak-white);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+aside #library-title a:hover {
+  color: var(--text-white);
+  background-color: var(--black-07);
+}
+
+aside #library {
+  height: 250px;
+  overflow: scroll;
+}
+
+aside #library > div {
+  margin-bottom: 20px;
   padding: 2rem;
   border-radius: 10px;
-  background-color: var(--black-07);
-  flex: 1;
+  color: var(--text-white);
+  background-color: var(--black-03);
+}
+
+aside #library > div h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+aside #library > div p {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+aside #library > div button {
+  padding: 0.8rem 1.5rem;
+}
+
+aside #legal-links {
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+}
+
+aside #legal-links li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 1.5rem;
+}
+
+aside #legal-links a {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-weak-white);
+}
+
+aside #legal-links .cookie a {
+  color: var(--text-white);
+}
+
+aside #language button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  border: 0.5px solid var(--text-white);
+  border-radius: 100px;
+  font-weight: 700;
+  font-weight: 400;
+  color: var(--text-white);
+  background-color: var(--background-black);
+}
+
+aside #language button span {
+  margin-right: 5px;
+  font-size: 2rem;
 }
 
 #content {
   margin-right: 1rem;
   padding: 3rem;
   border-radius: 10px;
-  background: linear-gradient(var(--black-10) 0%, var(--black-10) 10%, var(--black-07) 10%, var(--black-07) 100%);
-  flex: 3;
+  background: linear-gradient(var(--black-07) 0%, var(--black-03) 20%);
+  flex: 2.5;
   overflow-y: auto;
   scrollbar-color: var(--text-weak-white);
 }
