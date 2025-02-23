@@ -99,7 +99,7 @@ nav .gnb-left .fa-house {
   padding: 1rem;
   border-radius: 50%;
   background-color: var(--black-07);
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 nav .gnb-left .fa-house:hover {
@@ -113,7 +113,7 @@ nav .gnb-left .search-box {
   border: 0.5px solid transparent;
   border-radius: 100px;
   background-color: var(--black-07);
-  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 nav .gnb-left .search-box:hover {
@@ -240,7 +240,7 @@ aside #library-title {
 
 aside #library-title h3 {
   font-size: 1.6rem;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 aside #library-title h3:hover {
@@ -256,7 +256,7 @@ aside #library-title a {
   height: 3.5rem;
   border-radius: 50%;
   color: var(--text-weak-white);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 aside #library-title a:hover {
@@ -266,7 +266,7 @@ aside #library-title a:hover {
 
 aside #library {
   height: 250px;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 aside #library > div {
@@ -334,7 +334,7 @@ aside #language button span {
 
 #content {
   margin-right: 1rem;
-  padding: 3rem;
+  padding: 2rem 1rem;
   border-radius: 10px;
   background: linear-gradient(var(--black-07) 0%, var(--black-03) 20%);
   flex: 2.5;
@@ -342,17 +342,100 @@ aside #language button span {
   scrollbar-color: var(--text-weak-white);
 }
 
-#content ul {
+#content > section {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+#content .section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+#content .section-title h2 {
+  height: 50px;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+#content .section-title a {
+  color: var(--text-weak-white);
+}
+
+#content .card-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 #content .card {
+  width: calc((100% - 3rem) / 6);
+  min-width: 100px;
+  padding: 1.5rem 1.5rem 2rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#content .card:hover {
+  background-color: var(--black-03);
+}
+
+#content .card:hover .card-image::after {
+  /* background-color: var(--black-03); */
+  bottom: 5px;
+  opacity: 1;
 }
 
 #content .card-image {
-  width: 15rem;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#content .card-image::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  bottom: -5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+  font-family: 'Material Symbols Outlined';
+  font-size: 3.2rem;
+  color: var(--background-black);
+  background-color: var(--spotify-green);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  content: 'play_arrow';
+  font-variation-settings: 'FILL' 1;
 }
 
 #content img {
   width: 100%;
+  vertical-align: top;
+}
+
+#content .card-title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+#content .card-desc {
+  display: -webkit-box;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-weak-white);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
 }
