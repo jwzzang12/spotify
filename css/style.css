@@ -1,8 +1,8 @@
 :root {
   --spotify-green: #1ed760;
   --text-white: #ffffff;
-  --text-hover-white: rgba(255, 255, 255, 0.9);
   --text-weak-white: rgba(255, 255, 255, 0.6);
+  --button-hover-white: rgba(255, 255, 255, 0.9);
   --background-black: #121212;
   --black-03: rgba(255, 255, 255, 0.03);
   --black-07: rgba(255, 255, 255, 0.07);
@@ -36,7 +36,12 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn {
@@ -48,7 +53,7 @@ a {
 }
 
 .btn:hover {
-  background-color: var(--text-hover-white);
+  background-color: var(--button-hover-white);
   transform: scale(1.05);
 }
 
@@ -63,7 +68,8 @@ header,
 .gnb-actions,
 .gnb-right a,
 #library-title h3,
-aside #library-title a {
+aside #library-title a,
+aside #language button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,9 +99,6 @@ nav .gnb-left i {
 }
 
 nav .gnb-left .fa-house {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
   border-radius: 50%;
   background-color: var(--black-07);
@@ -241,6 +244,7 @@ aside #library-title {
 aside #library-title h3 {
   font-size: 1.6rem;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 aside #library-title h3:hover {
@@ -273,7 +277,6 @@ aside #library > div {
   margin-bottom: 20px;
   padding: 2rem;
   border-radius: 10px;
-  color: var(--text-white);
   background-color: var(--black-03);
 }
 
@@ -314,22 +317,29 @@ aside #legal-links .cookie a {
   color: var(--text-white);
 }
 
+aside #legal-links .cookie:hover {
+  text-decoration: underline 0.5px solid var(--text-white);
+}
+
 aside #language button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 1rem;
   padding: 0.5rem 1.5rem 0.5rem 1rem;
-  border: 0.5px solid var(--text-white);
+  border: 0.5px solid var(--text-weak-white);
   border-radius: 100px;
   font-weight: 700;
-  font-weight: 400;
   color: var(--text-white);
   background-color: var(--background-black);
+}
+
+aside #language button:hover {
+  border: 1px solid var(--text-white);
+  transform: scale(1.05);
 }
 
 aside #language button span {
   margin-right: 5px;
   font-size: 2rem;
+  font-weight: 400;
 }
 
 #content {
@@ -351,18 +361,26 @@ aside #language button span {
 #content .section-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 1.5rem;
 }
 
 #content .section-title h2 {
-  height: 50px;
   font-size: 2.4rem;
   font-weight: 600;
 }
 
-#content .section-title a {
+#content .section-title h2:hover {
+  text-decoration: underline 2px solid var(--text-white);
+}
+
+#content .section-title > a {
+  font-weight: 500;
   color: var(--text-weak-white);
+}
+
+#content .section-title > a:hover {
+  text-decoration: underline 1px solid var(--text-white);
 }
 
 #content .card-box {
@@ -371,6 +389,7 @@ aside #language button span {
 }
 
 #content .card {
+  position: relative;
   width: calc((100% - 3rem) / 6);
   min-width: 100px;
   padding: 1.5rem 1.5rem 2rem;
@@ -378,30 +397,14 @@ aside #language button span {
   transition: all 0.2s ease-in-out;
 }
 
-#content .card:hover {
-  background-color: var(--black-03);
-}
-
-#content .card:hover .card-image::after {
-  /* background-color: var(--black-03); */
-  bottom: 5px;
-  opacity: 1;
-}
-
-#content .card-image {
-  position: relative;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-#content .card-image::after {
+#content .card::after {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 5px;
-  bottom: -5px;
+  right: 20px;
+  bottom: 75px;
+  z-index: 10;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -418,6 +421,26 @@ aside #language button span {
   font-variation-settings: 'FILL' 1;
 }
 
+#content .card:hover {
+  background-color: var(--black-03);
+}
+
+#content .card:hover::after {
+  bottom: 80px;
+  opacity: 1;
+}
+
+#content .card-image {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#content .card-image.circle {
+  border-radius: 50%;
+}
+
 #content img {
   width: 100%;
   vertical-align: top;
@@ -429,13 +452,81 @@ aside #language button span {
   font-weight: 400;
 }
 
+#content .card-title:hover {
+  text-decoration: underline 1px solid var(--text-white);
+}
+
 #content .card-desc {
   display: -webkit-box;
   font-size: 1.4rem;
   font-weight: 400;
+  line-height: 1.3;
   color: var(--text-weak-white);
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   word-break: break-all;
+}
+
+#content .card-desc.artist:hover {
+  text-decoration: underline 1px solid var(--text-weak-white);
+}
+
+footer {
+  padding: 1.5rem;
+}
+
+footer .footer-nav-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--black-10);
+}
+
+footer .footer-nav {
+  display: flex;
+}
+
+footer .footer-nav-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+footer .footer-nav h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+footer .footer-nav a {
+  margin-bottom: 1.5rem;
+  color: var(--text-weak-white);
+}
+
+footer .footer-nav a:hover {
+  color: var(--text-white);
+  text-decoration: underline 1px solid var(--text-white);
+}
+
+footer .external-links i {
+  margin-left: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  background-color: var(--black-10);
+}
+
+footer .external-links i:hover {
+  background-color: var(--text-weak-white);
+}
+
+footer .footer-meta {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--text-weak-white);
+}
+
+footer .footer-copyright {
+  margin-bottom: 2rem;
 }
