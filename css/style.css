@@ -319,6 +319,9 @@ aside #legal-links .cookie a {
 
 aside #legal-links .cookie:hover {
   text-decoration: underline 0.5px solid var(--text-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 0.5px;
+  -webkit-text-decoration-color: var(--text-white);
 }
 
 aside #language button {
@@ -372,6 +375,9 @@ aside #language button span {
 
 #content .section-title h2:hover {
   text-decoration: underline 2px solid var(--text-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: var(--text-white);
 }
 
 #content .section-title > a {
@@ -381,6 +387,9 @@ aside #language button span {
 
 #content .section-title > a:hover {
   text-decoration: underline 1px solid var(--text-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 1px;
+  -webkit-text-decoration-color: var(--text-white);
 }
 
 #content .card-box {
@@ -454,6 +463,9 @@ aside #language button span {
 
 #content .card-title:hover {
   text-decoration: underline 1px solid var(--text-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 1px;
+  -webkit-text-decoration-color: var(--text-white);
 }
 
 #content .card-desc {
@@ -470,6 +482,9 @@ aside #language button span {
 
 #content .card-desc.artist:hover {
   text-decoration: underline 1px solid var(--text-weak-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 1px;
+  -webkit-text-decoration-color: var(--text-weak-white);
 }
 
 footer {
@@ -507,6 +522,9 @@ footer .footer-nav a {
 footer .footer-nav a:hover {
   color: var(--text-white);
   text-decoration: underline 1px solid var(--text-white);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-thickness: 1px;
+  -webkit-text-decoration-color: var(--text-white);
 }
 
 footer .external-links i {
