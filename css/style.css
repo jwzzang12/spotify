@@ -76,7 +76,7 @@ aside #language button {
 }
 
 header {
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   flex: 0 0 auto;
   /* header will not grow / shrink / size is determine by its content */
 }
@@ -112,7 +112,7 @@ nav .gnb-left .fa-house:hover {
 
 nav .gnb-left .search-box {
   margin: 0 1rem;
-  padding: 1.5rem;
+  padding: 1.3rem;
   border: 0.5px solid transparent;
   border-radius: 100px;
   background-color: var(--black-07);
@@ -154,6 +154,7 @@ input {
   width: 40rem;
   border: none;
   font-size: 1.6rem;
+  font-weight: 300;
   background: none;
   caret-color: var(--text-white);
 }
@@ -270,6 +271,7 @@ aside #library-title a:hover {
 
 aside #library {
   height: 250px;
+  margin-bottom: 2rem;
   overflow-y: auto;
 }
 
@@ -294,6 +296,7 @@ aside #library > div p {
 
 aside #library > div button {
   padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
 }
 
 aside #legal-links {
@@ -329,6 +332,7 @@ aside #language button {
   padding: 0.5rem 1.5rem 0.5rem 1rem;
   border: 0.5px solid var(--text-weak-white);
   border-radius: 100px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-white);
   background-color: var(--background-black);
@@ -547,4 +551,26 @@ footer .footer-meta {
 
 footer .footer-copyright {
   margin-bottom: 2rem;
+}
+
+#promo-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, #b531aa, #5a86de);
+}
+
+#promo-banner h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+#promo-banner p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+#promo-banner .join {
+  padding: 1.5rem 3rem;
 }
