@@ -1,5 +1,7 @@
 :root {
   --spotify-green: #1ed760;
+  --scroll-white: rgba(255, 255, 255, 0.3);
+  --scroll-hover-white: rgba(255, 255, 255, 0.5);
   --text-white: #ffffff;
   --text-weak-white: rgba(255, 255, 255, 0.6);
   --button-hover-white: rgba(255, 255, 255, 0.9);
@@ -55,6 +57,19 @@ button {
 .btn:hover {
   background-color: var(--button-hover-white);
   transform: scale(1.05);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
 }
 
 header,
@@ -233,6 +248,14 @@ aside {
   flex: 1;
 }
 
+aside #library:hover::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-white);
+}
+
+aside #library:hover::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-hover-white);
+}
+
 aside #library-title {
   display: flex;
   justify-content: space-between;
@@ -357,6 +380,14 @@ aside #language button span {
   flex: 2.5;
   overflow-y: auto;
   scrollbar-color: var(--text-weak-white);
+}
+
+#content:hover::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-white);
+}
+
+#content:hover::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-hover-white);
 }
 
 #content > section {
